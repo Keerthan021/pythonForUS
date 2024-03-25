@@ -1,0 +1,14 @@
+class A:
+    def __init__(self,x):
+        self.n = x
+class B(A):
+    def __init__(self,n):  
+     super().__init__(n)      
+    def __add__(self,other):
+        x = self.n + other.n
+        return x       
+    def __str__(self):
+        return self.n
+obj1 = B(7)
+obj2 = B(5)
+print(obj2 + obj1)
